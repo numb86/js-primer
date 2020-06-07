@@ -11,9 +11,9 @@ export class App {
         const inputElement = document.querySelector("#js-form-input");
         const containerElement = document.querySelector("#js-todo-list");
         const todoItemCountElement = document.querySelector("#js-todo-count");
+        //! [checkbox]
         this.todoListModel.onChange(() => {
             const todoListElement = element`<ul />`;
-            //! [checkbox]
             const todoItems = this.todoListModel.getTodoItems();
             todoItems.forEach(item => {
                 // 削除ボタン(x)をそれぞれ追加する
@@ -34,7 +34,7 @@ export class App {
                         completed: !item.completed
                     });
                 });
-                // 削除ボタン(x)をクリック時にTodoListModelからアイテムを削除する
+                // 削除ボタン(x)がクリックされたときにTodoListModelからアイテムを削除する
                 const deleteButtonElement = todoItemElement.querySelector(".delete");
                 deleteButtonElement.addEventListener("click", () => {
                     this.todoListModel.deleteTodo({
@@ -43,10 +43,10 @@ export class App {
                 });
                 todoListElement.appendChild(todoItemElement);
             });
-            //! [checkbox]
             render(todoListElement, containerElement);
-            todoItemCountElement.textContent = `Todoアイテム数: ${this.todoListModel.totalCount}`;
+            todoItemCountElement.textContent = `Todoアイテム数: ${this.todoListModel.getTotalCount()}`;
         });
+        //! [checkbox]
         formElement.addEventListener("submit", (event) => {
             event.preventDefault();
             this.todoListModel.addTodo(new TodoItemModel({

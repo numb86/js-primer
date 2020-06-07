@@ -1,30 +1,23 @@
-function main() {
-    const userId = getUserId();
-    getUserInfo(userId)
-        .then((userInfo) => createView(userInfo))
-        .then((view) => displayView(view))
-        .catch((error) => {
-            console.error(`エラーが発生しました (${error})`);
-        });
+async function main() {
+    try {
+        const userId = getUserId();
+        const userInfo = await fetchUserInfo(userId);
+        const view = createView(userInfo);
+        displayView(view);
+    } catch (error) {
+        console.error(`エラーが発生しました (${error})`);
+    }
 }
 
-function getUserInfo(userId) {
-    return new Promise((resolve, reject) => {
-        const request = new XMLHttpRequest();
-        request.open("GET", `https://api.github.com/users/${userId}`);
-        request.addEventListener("load", (event) => {
-            if (event.target.status !== 200) {
-                reject(new Error(`${event.target.status}: ${event.target.statusText}`));
+function fetchUserInfo(userId) {
+    return fetch(`https://api.github.com/users/${encodeURIComponent(userId)}`)
+        .then(response => {
+            if (!response.ok) {
+                return Promise.reject(new Error(`${response.status}: ${response.statusText}`));
+            } else {
+                return response.json();
             }
-
-            const userInfo = JSON.parse(event.target.responseText);
-            resolve(userInfo);
         });
-        request.addEventListener("error", () => {
-            reject(new Error("ネットワークエラー"));
-        });
-        request.send();
-    });
 }
 
 function getUserId() {
@@ -60,12 +53,12 @@ function escapeSpecialChars(str) {
 }
 
 function escapeHTML(strings, ...values) {
-    return strings.reduce((result, string, i) => {
+    return strings.reduce((result, str, i) => {
         const value = values[i - 1];
         if (typeof value === "string") {
-            return result + escapeSpecialChars(value) + string;
+            return result + escapeSpecialChars(value) + str;
         } else {
-            return result + String(value) + string;
+            return result + String(value) + str;
         }
     });
 }

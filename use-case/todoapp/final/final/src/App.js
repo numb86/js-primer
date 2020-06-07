@@ -10,34 +10,34 @@ export class App {
     }
 
     /**
-     * Todoを追加時に呼ばれるリスナー関数
+     * Todoを追加するときに呼ばれるリスナー関数
      * @param {string} title
      */
     handleAdd(title) {
         this.todoListModel.addTodo(new TodoItemModel({ title, completed: false }));
-    };
+    }
 
     /**
-     * Todoの状態を更新時に呼ばれるリスナー関数
+     * Todoの状態を更新したときに呼ばれるリスナー関数
      * @param {{ id:number, completed: boolean }}
      */
     handleUpdate({ id, completed }) {
         this.todoListModel.updateTodo({ id, completed });
-    };
+    }
 
     /**
-     * Todoを削除時に呼ばれるリスナー関数
+     * Todoを削除したときに呼ばれるリスナー関数
      * @param {{ id: number }}
      */
     handleDelete({ id }) {
         this.todoListModel.deleteTodo({ id });
-    };
+    }
 
     mount() {
         const formElement = document.querySelector("#js-form");
         const inputElement = document.querySelector("#js-form-input");
-        const todoCountElement = document.querySelector("#js-todo-count");
-        const todoListContainerElement = document.querySelector("#js-todo-list");
+        const todoItemCountElement = document.querySelector("#js-todo-count");
+        const containerElement = document.querySelector("#js-todo-list");
         this.todoListModel.onChange(() => {
             const todoItems = this.todoListModel.getTodoItems();
             const todoListElement = this.todoListView.createElement(todoItems, {
@@ -49,8 +49,8 @@ export class App {
                     this.handleDelete({ id });
                 }
             });
-            render(todoListElement, todoListContainerElement);
-            todoCountElement.textContent = `Todoアイテム数: ${this.todoListModel.totalCount}`;
+            render(todoListElement, containerElement);
+            todoItemCountElement.textContent = `Todoアイテム数: ${this.todoListModel.getTotalCount()}`;
         });
 
         formElement.addEventListener("submit", (event) => {

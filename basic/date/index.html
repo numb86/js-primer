@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Date · JavaScriptの入門書 #jsprimer</title>
+        <title>Date · JavaScript Primer #jsprimer</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="日付や時刻を扱うビルトインオブジェクトのDateを紹介します。">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,8 +73,8 @@
 <meta name="google-site-verification" content="bMotEbgYwkzA3k4PkuyK_NUdz0bKh-Phz0oUwNmRSVo" />
 <style>
     /*
-    Disable antialias
-    */
+     * Disable antialias
+     */
     * {
         -webkit-font-smoothing: initial !important
     }
@@ -110,10 +110,29 @@
         line-height: inherit;
         margin-bottom: 0px !important;
     }
+    /* Markdown */
+    .markdown-section sup, .markdown-section sub {
+        font-size: 75%;
+    }
+
+    .book_footer{
+        text-align: center;
+        color: #000000;
+        background: #ddd;
+        font-size: 16px;
+        margin-top: 16px;
+        padding: 16px;
+    }
+    /* Hide footer on mobile */
+    /* Use navigation width */
+    @media (max-width: 1240px) {
+        .book_footer {
+            display: none;
+        }
+    }
 </style>
 <meta name="theme-color" content="#ffffff">
 <link rel="manifest" href="../../manifest.json">
-<script src="https://unpkg.com/service-worker-updatefound-refresh-dialog@1.1.0/dist/service-worker-updatefound-refresh-dialog.umd.js"></script>
 <script>
     if ("serviceWorker" in navigator) {
         const isLocalhost = Boolean(
@@ -128,15 +147,11 @@
         );
         if (!isLocalhost) {
             window.addEventListener("load", () => {
-                navigator.serviceWorker.register("../../sw.js")
-                    .then(function(registration) {
-                        serviceWorkerUpdatefoundRefreshDialog.register(registration);
-                    });
+                navigator.serviceWorker.register("../../sw.js");
             });
         }
     }
 </script>
-
 
     </head>
     <body>
@@ -187,7 +202,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../../intro/preparation/">
+        <li class="chapter " data-level="1.2.1" data-path="../../intro/authors/">
+            
+                <a href="../../intro/authors/">
+            
+                    
+                    著者紹介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../intro/preparation/">
             
                 <a href="../../intro/preparation/">
             
@@ -200,7 +228,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="../../intro/feedback/">
+        <li class="chapter " data-level="1.2.3" data-path="../../intro/feedback/">
             
                 <a href="../../intro/feedback/">
             
@@ -510,7 +538,7 @@
                 <a href="../async/">
             
                     
-                    非同期処理
+                    非同期処理:コールバック/Promise/Async Function
             
                 </a>
             
@@ -570,7 +598,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.27" data-path="../ecmascript/">
+        <li class="chapter " data-level="1.3.27" data-path="../module/">
+            
+                <a href="../module/">
+            
+                    
+                    ECMAScriptモジュール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.28" data-path="../ecmascript/">
             
                 <a href="../ecmascript/">
             
@@ -583,7 +624,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.28" data-path="../other-parts/">
+        <li class="chapter " data-level="1.3.29" data-path="../other-parts/">
             
                 <a href="../other-parts/">
             
@@ -628,20 +669,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../../use-case/module/">
-            
-                <a href="../../use-case/module/">
-            
-                    
-                    モジュール
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.3" data-path="../../use-case/ajaxapp/">
+        <li class="chapter " data-level="1.4.2" data-path="../../use-case/ajaxapp/">
             
                 <a href="../../use-case/ajaxapp/">
             
@@ -655,12 +683,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.3.1" data-path="../../use-case/ajaxapp/entrypoint/">
+        <li class="chapter " data-level="1.4.2.1" data-path="../../use-case/ajaxapp/entrypoint/">
             
                 <a href="../../use-case/ajaxapp/entrypoint/">
             
                     
-                    エントリポイント
+                    エントリーポイント
             
                 </a>
             
@@ -668,9 +696,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3.2" data-path="../../use-case/ajaxapp/xhr/">
+        <li class="chapter " data-level="1.4.2.2" data-path="../../use-case/ajaxapp/http/">
             
-                <a href="../../use-case/ajaxapp/xhr/">
+                <a href="../../use-case/ajaxapp/http/">
             
                     
                     HTTP通信
@@ -681,7 +709,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3.3" data-path="../../use-case/ajaxapp/display/">
+        <li class="chapter " data-level="1.4.2.3" data-path="../../use-case/ajaxapp/display/">
             
                 <a href="../../use-case/ajaxapp/display/">
             
@@ -694,7 +722,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3.4" data-path="../../use-case/ajaxapp/promise/">
+        <li class="chapter " data-level="1.4.2.4" data-path="../../use-case/ajaxapp/promise/">
             
                 <a href="../../use-case/ajaxapp/promise/">
             
@@ -712,7 +740,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../../use-case/nodecli/">
+        <li class="chapter " data-level="1.4.3" data-path="../../use-case/nodecli/">
             
                 <a href="../../use-case/nodecli/">
             
@@ -726,7 +754,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.4.1" data-path="../../use-case/nodecli/helloworld/">
+        <li class="chapter " data-level="1.4.3.1" data-path="../../use-case/nodecli/helloworld/">
             
                 <a href="../../use-case/nodecli/helloworld/">
             
@@ -739,7 +767,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4.2" data-path="../../use-case/nodecli/argument-parse/">
+        <li class="chapter " data-level="1.4.3.2" data-path="../../use-case/nodecli/argument-parse/">
             
                 <a href="../../use-case/nodecli/argument-parse/">
             
@@ -752,7 +780,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4.3" data-path="../../use-case/nodecli/read-file/">
+        <li class="chapter " data-level="1.4.3.3" data-path="../../use-case/nodecli/read-file/">
             
                 <a href="../../use-case/nodecli/read-file/">
             
@@ -765,7 +793,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4.4" data-path="../../use-case/nodecli/md-to-html/">
+        <li class="chapter " data-level="1.4.3.4" data-path="../../use-case/nodecli/md-to-html/">
             
                 <a href="../../use-case/nodecli/md-to-html/">
             
@@ -778,7 +806,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4.5" data-path="../../use-case/nodecli/refactor-and-unittest/">
+        <li class="chapter " data-level="1.4.3.5" data-path="../../use-case/nodecli/refactor-and-unittest/">
             
                 <a href="../../use-case/nodecli/refactor-and-unittest/">
             
@@ -796,7 +824,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../../use-case/todoapp/">
+        <li class="chapter " data-level="1.4.4" data-path="../../use-case/todoapp/">
             
                 <a href="../../use-case/todoapp/">
             
@@ -810,12 +838,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.5.1" data-path="../../use-case/todoapp/entrypoint/">
+        <li class="chapter " data-level="1.4.4.1" data-path="../../use-case/todoapp/entrypoint/">
             
                 <a href="../../use-case/todoapp/entrypoint/">
             
                     
-                    エントリポイント
+                    エントリーポイント
             
                 </a>
             
@@ -823,7 +851,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5.2" data-path="../../use-case/todoapp/app-structure/">
+        <li class="chapter " data-level="1.4.4.2" data-path="../../use-case/todoapp/app-structure/">
             
                 <a href="../../use-case/todoapp/app-structure/">
             
@@ -836,7 +864,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5.3" data-path="../../use-case/todoapp/form-event/">
+        <li class="chapter " data-level="1.4.4.3" data-path="../../use-case/todoapp/form-event/">
             
                 <a href="../../use-case/todoapp/form-event/">
             
@@ -849,7 +877,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5.4" data-path="../../use-case/todoapp/event-model/">
+        <li class="chapter " data-level="1.4.4.4" data-path="../../use-case/todoapp/event-model/">
             
                 <a href="../../use-case/todoapp/event-model/">
             
@@ -862,7 +890,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5.5" data-path="../../use-case/todoapp/update-delete/">
+        <li class="chapter " data-level="1.4.4.5" data-path="../../use-case/todoapp/update-delete/">
             
                 <a href="../../use-case/todoapp/update-delete/">
             
@@ -875,7 +903,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5.6" data-path="../../use-case/todoapp/final/">
+        <li class="chapter " data-level="1.4.4.6" data-path="../../use-case/todoapp/final/">
             
                 <a href="../../use-case/todoapp/final/">
             
@@ -895,6 +923,45 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../appendix/links/">
+            
+                <a href="../../appendix/links/">
+            
+                    
+                    付録: 参考リンク集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../cheetsheet/">
+            
+                <a href="../../cheetsheet/">
+            
+                    
+                    付録: JavaScriptチートシート
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../outro/">
+            
+                <a href="../../outro/">
+            
+                    
+                    おわりに
+            
+                </a>
+            
+
             
         </li>
     
@@ -919,10 +986,12 @@
     <div class="book-body">
         
             <div class="body-inner">
-                
+                 
                     
 
 <!-- Header -->
+<meta name="keywords" content="JavaScript,入門,入門書,チュートリアル,書籍,本,無料,Node.js,ブラウザ"/>
+<link rel="author" href="https://www.hatena.ne.jp/efcl/"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"/>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <style>
@@ -962,6 +1031,11 @@
         /* Header分のズレを入れる */
         .page-wrapper {
             padding-top: 60px;
+        }
+
+        /* github-issue-feedbackを非表示にする */
+        .gitbook-plugin-github-issue-feedback {
+            display: none;
         }
     }
 
@@ -1008,15 +1082,22 @@
     .header-right {
         order: 4;
         display: inline-flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         /* icon size */
         font-size: 24px;
     }
 
-    .github-link {
+    .amazon-link, .github-link {
         color: #fff;
+        /* Padding and make Vertical */
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 4px;
+        padding-right: 4px;
     }
 
     /* Desktop */
@@ -1054,6 +1135,23 @@
         .algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
             display: none !important;
         }
+
+        .algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu {
+            right: inherit !important
+        }
+
+        .algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu::before {
+            right: 50%;
+        }
+
+        .sbx-custom {
+            width: 92px !important;
+            padding: initial !important;
+        }
+
+        .amazon-link {
+            display: none;
+        }
     }
 
     /* SearchBox */
@@ -1061,12 +1159,6 @@
         height: 50px;
     }
 
-    @media (max-width: 768px) {
-        .sbx-custom {
-            width: 150px !important;
-            padding: initial !important;
-        }
-    }
 
     .sbx-custom {
         display: inline-block;
@@ -1244,9 +1336,9 @@
 <div class="book-header" role="navigation">
     
     <a class="book-header-title" href="../..">
-        <img class="book-header-title-img" alt="js-primer"
+        <img class="book-header-title-img" alt="JavaScript Primer"
              src="../../gitbook/icons/icon-128x128.png"/>
-        <h2 class="book-header-title-h" title="js-primer - JavaScriptの入門書">js-primer</h2>
+        <h2 class="book-header-title-h" title="JavaScript Primer - 迷わないための入門書">JavaScript Primer</h2>
     </a>
     <div class="searchbarWrapper header-center">
         <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
@@ -1278,6 +1370,13 @@
         </form>
     </div>
     <div class="header-right">
+        <!-- Icon: https://www.iconfinder.com/iconsets/circle-payment -->
+        <a class="amazon-link" title="Amazon: JavaScript Primer 迷わないための入門書"
+           href="https://www.amazon.co.jp/dp/4048930737/" target="_blank"><img
+                width="22"
+                height="22"
+                style="margin: 1px;"
+                src="../../gitbook/icons/amazon-icon.png" alt=""></a>
         <a class="github-link" title="GitHub: asciidwango/js-primer" href="https://github.com/asciidwango/js-primer"
            target="_blank"><i
                 class="fa fa-github fa-fw"></i></a>
@@ -1285,19 +1384,27 @@
 </div>
 
 <script type="text/javascript">
-    document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {
-        this.parentNode.querySelector('input').focus();
+    document.querySelector(".searchbox [type=\"reset\"]").addEventListener("click", function() {
+        this.parentNode.querySelector("input").focus();
     });
 </script>
 <script>
     var search = docsearch({
-        apiKey: 'fd28ebaba94be0c39fb9fa1b2fed4f23', // use a SEARCH-ONLY api key here
-        indexName: 'asciidwango',
-        inputSelector: '.sbx-custom__input',
+        apiKey: "fd28ebaba94be0c39fb9fa1b2fed4f23", // use a SEARCH-ONLY api key here
+        indexName: "asciidwango",
+        inputSelector: ".sbx-custom__input",
         debug: false // set to `true` if you want to inspect the dropdown menu's CSS
     });
 </script>
+<script type="text/javascript">
+    (function(){var t,e,n,r,a;for(t=function(){var t;return t=[],function(){var e,n,r,a;for(n=["init","start","stop","user","track","action","event","goal","chat","buy","page","view","admin","group","alias","ready","link","form","click","submit","cmd","emit","on","send","css","js","style","option","get","set","collection"],e=function(e){return function(){return t.push([e].concat(Array.prototype.slice.call(arguments,0)))}},r=0,a=[];r<n.length;)t[n[r]]=e(n[r]),a.push(r++);return a}(),t.init=function(e,n){var r,a;return t.api_key=e,t.options=n||{},a=document.createElement("script"),a.type="text/javascript",a.async=!0,a.charset="utf-8",a.src=t.options.tracker_url||"https://static.karte.io/libs/tracker.js",r=document.getElementsByTagName("script")[0],r.parentNode.insertBefore(a,r)},t},r=window.karte_tracker_names||["tracker"],e=0,n=r.length;n>e;e++)a=r[e],window[a]||(window[a]=t());tracker.init("a2d22604ec1d1c6d9d53d9d3eb87961d", { spa_mode: { reset_past_actions: true, close_actions: true }})}).call(this);
+    window.addEventListener("DOMContentLoaded", function(){
+        gitbook.events.on("page.change", function() {
+            tracker.view();
+        });
 
+    });
+</script>
 
 
 
@@ -1311,23 +1418,22 @@
                                 <h1 id="date"><a name="date" class="plugin-anchor" href="#date"><i class="fa fa-link" aria-hidden="true"></i></a>Date </h1>
 <p>&#x3053;&#x306E;&#x7AE0;&#x3067;&#x306F;&#x3001;JavaScript&#x3067;&#x65E5;&#x4ED8;&#x3084;&#x6642;&#x523B;&#x3092;&#x6271;&#x3046;&#x305F;&#x3081;&#x306E;<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>&#x306B;&#x3064;&#x3044;&#x3066;&#x5B66;&#x3073;&#x307E;&#x3059;&#x3002;</p>
 <h2 id="date-object"><a name="date-object" class="plugin-anchor" href="#date-object"><i class="fa fa-link" aria-hidden="true"></i></a>Date&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8; </h2>
-<p><code>Date</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306F;<code>String</code>&#x3084;<code>Array</code>&#x306A;&#x3069;&#x3068;&#x540C;&#x3058;&#x304F;&#x3001;&#x30D3;&#x30EB;&#x30C8;&#x30A4;&#x30F3;&#x306E;&#x30B0;&#x30ED;&#x30FC;&#x30D0;&#x30EB;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x3059;&#x3002;
-&#x305D;&#x306E;&#x305F;&#x3081;&#x3001;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x4E2D;&#x306E;&#x3069;&#x3053;&#x304B;&#x3089;&#x3067;&#x3082;&#x547C;&#x3073;&#x51FA;&#x3057;&#x3066;&#x4F7F;&#x3048;&#x307E;&#x3059;&#x3002;</p>
+<p><code>Date</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306F;<code>String</code>&#x3084;<code>Array</code>&#x306A;&#x3069;&#x3068;&#x540C;&#x3058;&#x304F;&#x3001;ECMAScript&#x3067;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x305F;&#x30D3;&#x30EB;&#x30C8;&#x30A4;&#x30F3;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x3059;&#x3002;</p>
 <p><code>Date</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x5316;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x3001;&#x3042;&#x308B;&#x7279;&#x5B9A;&#x306E;&#x6642;&#x523B;&#x3092;&#x8868;&#x3059;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x304C;&#x5F97;&#x3089;&#x308C;&#x307E;&#x3059;&#x3002;
 <code>Date</code>&#x306B;&#x304A;&#x3051;&#x308B;&#x300C;&#x6642;&#x523B;&#x300D;&#x306F;&#x3001;UTC&#xFF08;&#x5354;&#x5B9A;&#x4E16;&#x754C;&#x6642;&#xFF09;&#x306E;1970&#x5E74;1&#x6708;1&#x65E5;0&#x6642;0&#x5206;0&#x79D2;&#x3092;&#x57FA;&#x6E96;&#x3068;&#x3057;&#x305F;&#x76F8;&#x5BFE;&#x7684;&#x306A;&#x30DF;&#x30EA;&#x79D2;&#x3068;&#x3057;&#x3066;&#x4FDD;&#x6301;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
 &#x3053;&#x306E;&#x30DF;&#x30EA;&#x79D2;&#x306E;&#x5024;&#x306E;&#x3053;&#x3068;&#x3092;&#x3001;&#x672C;&#x7AE0;&#x3067;&#x306F;&#x300C;&#x6642;&#x523B;&#x5024;&#x300D;&#x3068;&#x547C;&#x3073;&#x307E;&#x3059;&#x3002;
-<code>Date</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306F;&#x305D;&#x308C;&#x305E;&#x308C;&#x304C;&#x3072;&#x3068;&#x3064;&#x306E;&#x6642;&#x523B;&#x5024;&#x3092;&#x3082;&#x3061;&#x3001;&#x305D;&#x306E;&#x6642;&#x523B;&#x5024;&#x3092;&#x3082;&#x3068;&#x306B;&#x65E5;&#x4ED8;&#x3084;&#x6642;&#x30FB;&#x5206;&#x306A;&#x3069;&#x3092;&#x6271;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x63D0;&#x4F9B;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<code>Date</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306F;&#x305D;&#x308C;&#x305E;&#x308C;&#x304C;&#x3072;&#x3068;&#x3064;&#x306E;&#x6642;&#x523B;&#x5024;&#x3092;&#x6301;&#x3061;&#x3001;&#x305D;&#x306E;&#x6642;&#x523B;&#x5024;&#x3092;&#x5143;&#x306B;&#x65E5;&#x4ED8;&#x3084;&#x6642;&#x30FB;&#x5206;&#x306A;&#x3069;&#x3092;&#x6271;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x63D0;&#x4F9B;&#x3057;&#x307E;&#x3059;&#x3002;</p>
 <h3 id="create-instance"><a name="create-instance" class="plugin-anchor" href="#create-instance"><i class="fa fa-link" aria-hidden="true"></i></a>&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306E;&#x4F5C;&#x6210; </h3>
 <p><code>Date</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306F;&#x3001;&#x5E38;&#x306B;new&#x6F14;&#x7B97;&#x5B50;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3059;&#x3002;
 <code>Date</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x4F5C;&#x6210;&#x306B;&#x306F;&#x3001;&#x5927;&#x304D;&#x304F;&#x5206;&#x3051;&#x3066;2&#x3064;&#x306E;&#x7A2E;&#x985E;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;
-&#x3072;&#x3068;&#x3064;&#x306F;&#x73FE;&#x5728;&#x306E;&#x6642;&#x523B;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x5316;&#x3059;&#x308B;&#x3082;&#x306E;&#x3001;&#x3082;&#x3046;&#x3072;&#x3068;&#x3064;&#x306F;&#x4EFB;&#x610F;&#x306E;&#x6642;&#x523B;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x5316;&#x3059;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;</p>
+1&#x3064;&#x306F;&#x73FE;&#x5728;&#x306E;&#x6642;&#x523B;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x5316;&#x3059;&#x308B;&#x3082;&#x306E;&#x3001;&#x3082;&#x3046;1&#x3064;&#x306F;&#x4EFB;&#x610F;&#x306E;&#x6642;&#x523B;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x5316;&#x3059;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;&#x3002;</p>
 <h4 id="instance-current-time"><a name="instance-current-time" class="plugin-anchor" href="#instance-current-time"><i class="fa fa-link" aria-hidden="true"></i></a>&#x73FE;&#x5728;&#x306E;&#x6642;&#x523B;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x5316;&#x3059;&#x308B; </h4>
 <p><code>Date</code>&#x3092;new&#x3059;&#x308B;&#x3068;&#x304D;&#x306B;&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x5F15;&#x6570;&#x3092;&#x4F55;&#x3082;&#x6E21;&#x3055;&#x306A;&#x3044;&#x5834;&#x5408;&#x3001;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x308B;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306F;&#x73FE;&#x5728;&#x306E;&#x6642;&#x523B;&#x3092;&#x8868;&#x3059;&#x3082;&#x306E;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;
 <code>Date</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3067;&#x306F;&#x306A;&#x304F;&#x73FE;&#x5728;&#x306E;&#x6642;&#x523B;&#x306E;&#x6642;&#x523B;&#x5024;&#x3060;&#x3051;&#x304C;&#x6B32;&#x3057;&#x3044;&#x5834;&#x5408;&#x306B;&#x306F;&#x3001;<code>Date.now</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306E;&#x623B;&#x308A;&#x5024;&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x3002;
-&#x4F5C;&#x6210;&#x3057;&#x305F;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x304C;&#x3082;&#x3064;&#x6642;&#x523B;&#x5024;&#x306F;&#x3001;<code>getTime</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;&#x53D6;&#x5F97;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;
+&#x4F5C;&#x6210;&#x3057;&#x305F;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x304C;&#x6301;&#x3064;&#x6642;&#x523B;&#x5024;&#x306F;&#x3001;<code>getTime</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;&#x53D6;&#x5F97;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;
 &#x307E;&#x305F;&#x3001;<code>toISOString</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x4F7F;&#x3046;&#x3068;&#x3001;&#x305D;&#x306E;&#x6642;&#x523B;&#x3092;UTC&#x306B;&#x304A;&#x3051;&#x308B;<a href="https://ja.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>&#x5F62;&#x5F0F;&#x306E;&#x6587;&#x5B57;&#x5217;&#x306B;&#x5909;&#x63DB;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;
 ISO 8601&#x3068;&#x306F;&#x56FD;&#x969B;&#x898F;&#x683C;&#x3068;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;&#x6587;&#x5B57;&#x5217;&#x306E;&#x5F62;&#x5F0F;&#x3067;&#x3001;<code>2006-01-02T15:04:05.999+09:00</code>&#x306E;&#x3088;&#x3046;&#x306B;&#x6642;&#x523B;&#x3092;&#x8868;&#x73FE;&#x3057;&#x307E;&#x3059;&#x3002;
-&#x4EBA;&#x9593;&#x304C;&#x898B;&#x3066;&#x3082;&#x5206;&#x304B;&#x308A;&#x3084;&#x3059;&#x3044;&#x6587;&#x5B57;&#x5217;&#x3067;&#x3042;&#x308B;&#x305F;&#x3081;&#x3001;&#x5E83;&#x304F;&#x5229;&#x7528;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+&#x4EBA;&#x9593;&#x304C;&#x898B;&#x3066;&#x3082;&#x308F;&#x304B;&#x308A;&#x3084;&#x3059;&#x3044;&#x6587;&#x5B57;&#x5217;&#x3067;&#x3042;&#x308B;&#x305F;&#x3081;&#x3001;&#x5E83;&#x304F;&#x5229;&#x7528;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 <p><a class="gitbook-plugin-js-console" aria-hidden="true"></a></p>
 <pre><code class="lang-js"><span class="hljs-comment">// &#x73FE;&#x5728;&#x306E;&#x6642;&#x523B;&#x3092;&#x8868;&#x3059;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092;&#x4F5C;&#x6210;&#x3059;&#x308B;</span>
 <span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
@@ -1341,8 +1447,8 @@ ISO 8601&#x3068;&#x306F;&#x56FD;&#x969B;&#x898F;&#x683C;&#x3068;&#x306A;&#x3063;
 </code></pre>
 <h4 id="instance-any-time"><a name="instance-any-time" class="plugin-anchor" href="#instance-any-time"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EFB;&#x610F;&#x306E;&#x6642;&#x523B;&#x3092;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x5316;&#x3059;&#x308B; </h4>
 <p>&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x5F15;&#x6570;&#x3092;&#x6E21;&#x3059;&#x3053;&#x3068;&#x3067;&#x3001;&#x4EFB;&#x610F;&#x306E;&#x6642;&#x523B;&#x3092;&#x8868;&#x3059;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092;&#x4F5C;&#x6210;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;
-<code>Date</code>&#x306E;&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x95A2;&#x6570;&#x306F;&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30ED;&#x30FC;&#x30C9;&#x3055;&#x308C;&#x3066;&#x304A;&#x308A;&#x3001;&#x6E21;&#x3059;&#x5F15;&#x6570;&#x306B;&#x3088;&#x3063;&#x3066;&#x6642;&#x523B;&#x306E;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x304C;&#x5909;&#x308F;&#x308A;&#x307E;&#x3059;&#x3002;
-&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30ED;&#x30FC;&#x30C9;&#x306F;&#x6B21;&#x306E;3&#x7A2E;&#x985E;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<code>Date</code>&#x306E;&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x95A2;&#x6570;&#x306F;&#x6E21;&#x3059;&#x30C7;&#x30FC;&#x30BF;&#x578B;&#x3084;&#x5F15;&#x6570;&#x306B;&#x3088;&#x3063;&#x3066;&#x6642;&#x523B;&#x306E;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#x304C;&#x5909;&#x308F;&#x308A;&#x307E;&#x3059;&#x3002;
+<code>Date</code>&#x306F;&#x6B21;&#x306E;3&#x7A2E;&#x985E;&#x3092;&#x5F15;&#x6570;&#x3068;&#x3057;&#x3066;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
 <ul>
 <li>&#x6642;&#x523B;&#x5024;&#x3092;&#x6E21;&#x3059;&#x3082;&#x306E;</li>
 <li>&#x6642;&#x523B;&#x3092;&#x793A;&#x3059;&#x6587;&#x5B57;&#x5217;&#x3092;&#x6E21;&#x3059;&#x3082;&#x306E;</li>
@@ -1351,7 +1457,7 @@ ISO 8601&#x3068;&#x306F;&#x56FD;&#x969B;&#x898F;&#x683C;&#x3068;&#x306A;&#x3063;
 <p>1&#x3064;&#x3081;&#x306F;&#x3001;&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x95A2;&#x6570;&#x306B;&#x30DF;&#x30EA;&#x79D2;&#x3092;&#x8868;&#x3059;&#x6570;&#x5024;&#x578B;&#x306E;&#x5F15;&#x6570;&#x3092;&#x6E21;&#x3057;&#x305F;&#x3068;&#x304D;&#x306B;&#x9069;&#x7528;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
 &#x6E21;&#x3057;&#x305F;&#x6570;&#x5024;&#x3092;UTC&#x306E;1970&#x5E74;1&#x6708;1&#x65E5;0&#x6642;0&#x5206;0&#x79D2;&#x3092;&#x57FA;&#x6E96;&#x3068;&#x3057;&#x305F;&#x6642;&#x523B;&#x5024;&#x3068;&#x3057;&#x3066;&#x6271;&#x3044;&#x307E;&#x3059;&#x3002;
 &#x3053;&#x306E;&#x65B9;&#x6CD5;&#x306F;&#x5B9F;&#x884C;&#x74B0;&#x5883;&#x306B;&#x3088;&#x308B;&#x6319;&#x52D5;&#x306E;&#x9055;&#x3044;&#x304C;&#x8D77;&#x304D;&#x306A;&#x3044;&#x306E;&#x3067;&#x5B89;&#x5168;&#x3067;&#x3059;&#x3002;
-&#x307E;&#x305F;&#x3001;&#x6642;&#x523B;&#x5024;&#x3092;&#x76F4;&#x63A5;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x306E;&#x3067;&#x3001;&#x4ED6;2&#x3064;&#x306E;&#x65B9;&#x6CD5;&#x3068;&#x9055;&#x3063;&#x3066;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x3092;&#x8003;&#x616E;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</p>
+&#x307E;&#x305F;&#x3001;&#x6642;&#x523B;&#x5024;&#x3092;&#x76F4;&#x63A5;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x306E;&#x3067;&#x3001;&#x4ED6;&#x306E;2&#x3064;&#x306E;&#x65B9;&#x6CD5;&#x3068;&#x9055;&#x3063;&#x3066;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x3092;&#x8003;&#x616E;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;</p>
 <p><a class="gitbook-plugin-js-console" aria-hidden="true"></a></p>
 <pre><code class="lang-js"><span class="hljs-comment">// &#x6642;&#x523B;&#x306E;&#x30DF;&#x30EA;&#x79D2;&#x5024;&#x3092;&#x76F4;&#x63A5;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x5F62;&#x5F0F;</span>
 <span class="hljs-comment">// 1136214245999&#x306F;UTC&#x306B;&#x304A;&#x3051;&#x308B;&quot;2006&#x5E74;1&#x6708;2&#x65E5;15&#x6642;04&#x5206;05&#x79D2;999&quot;&#x3092;&#x8868;&#x3059;</span>
@@ -1360,7 +1466,7 @@ ISO 8601&#x3068;&#x306F;&#x56FD;&#x969B;&#x898F;&#x683C;&#x3068;&#x306A;&#x3063;
 <span class="hljs-built_in">console</span>.log(date.toISOString()); <span class="hljs-comment">// =&gt; &quot;2006-01-02T15:04:05.999Z&quot;</span>
 </code></pre>
 <p>2&#x3064;&#x3081;&#x306F;&#x6587;&#x5B57;&#x5217;&#x578B;&#x306E;&#x5F15;&#x6570;&#x3092;&#x6E21;&#x3057;&#x305F;&#x3068;&#x304D;&#x306B;&#x9069;&#x7528;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
-<a href="https://tools.ietf.org/html/rfc2822#section-3.3" target="_blank">RFC2822</a>&#x3084;<a href="https://ja.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>&#x306E;&#x5F62;&#x5F0F;&#x306B;&#x3057;&#x305F;&#x304C;&#x3063;&#x305F;&#x6587;&#x5B57;&#x5217;&#x3092;&#x6E21;&#x3059;&#x3068;&#x3001;
+<a href="https://tools.ietf.org/html/rfc2822#section-3.3" target="_blank">RFC2822</a>&#x3084;<a href="https://ja.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>&#x306E;&#x5F62;&#x5F0F;&#x306B;&#x5F93;&#x3063;&#x305F;&#x6587;&#x5B57;&#x5217;&#x3092;&#x6E21;&#x3059;&#x3068;&#x3001;
 &#x305D;&#x306E;&#x6587;&#x5B57;&#x5217;&#x3092;&#x30D1;&#x30FC;&#x30B9;&#x3057;&#x3066;&#x5F97;&#x3089;&#x308C;&#x308B;&#x6642;&#x523B;&#x5024;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3001;<code>Date</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3059;&#x3002;</p>
 <p>&#x6B21;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3067;&#x306F;&#x3001;ISO 8601&#x5F62;&#x5F0F;&#x306E;&#x6587;&#x5B57;&#x5217;&#x3092;&#x6E21;&#x3057;&#x3066;<code>Date</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092;&#x4F5C;&#x6210;&#x3057;&#x307E;&#x3059;&#x3002;
 &#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x3092;&#x542B;&#x3080;&#x6587;&#x5B57;&#x5217;&#x306E;&#x5834;&#x5408;&#x306F;&#x3001;&#x305D;&#x306E;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306B;&#x304A;&#x3051;&#x308B;&#x6642;&#x523B;&#x3068;&#x3057;&#x3066;&#x6642;&#x523B;&#x5024;&#x3092;&#x8A08;&#x7B97;&#x3057;&#x307E;&#x3059;&#x3002;
@@ -1381,11 +1487,13 @@ ISO 8601&#x3068;&#x306F;&#x56FD;&#x969B;&#x898F;&#x683C;&#x3068;&#x306A;&#x3063;
 <pre><code class="lang-js"><span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(year, month, day, hour, minutes, seconds, milliseconds);
 </code></pre>
 <p>&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x95A2;&#x6570;&#x306B;2&#x3064;&#x4EE5;&#x4E0A;&#x306E;&#x5F15;&#x6570;&#x3092;&#x6E21;&#x3059;&#x3068;&#x3001;&#x3053;&#x306E;&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30ED;&#x30FC;&#x30C9;&#x304C;&#x9069;&#x7528;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
-&#x65E5;&#x3092;&#x8868;&#x3059;&#x7B2C;3&#x5F15;&#x6570;&#x304B;&#x3089;&#x5F8C;&#x308D;&#x306E;&#x5F15;&#x6570;&#x306F;&#x7701;&#x7565;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x304C;&#x3001;&#x65E5;&#x4ED8;&#x3060;&#x3051;&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;1&#x304C;&#x8A2D;&#x5B9A;&#x3055;&#x308C;&#x3001;&#x305D;&#x306E;&#x4ED6;&#x306F;0&#x304C;&#x8A2D;&#x5B9A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
-&#x307E;&#x305F;&#x3001;&#x6708;&#x3092;&#x8868;&#x3059;&#x7B2C;2&#x5F15;&#x6570;&#x306F;0&#x304B;&#x3089;11&#x307E;&#x3067;&#x306E;&#x6570;&#x5024;&#x3067;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x3053;&#x3068;&#x306B;&#x3082;&#x6CE8;&#x610F;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
+&#x65E5;&#x3092;&#x8868;&#x3059;&#x7B2C;&#x4E09;&#x5F15;&#x6570;&#x304B;&#x3089;&#x5F8C;&#x308D;&#x306E;&#x5F15;&#x6570;&#x306F;&#x7701;&#x7565;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x304C;&#x3001;&#x65E5;&#x4ED8;&#x3060;&#x3051;&#x306F;&#x30C7;&#x30D5;&#x30A9;&#x30EB;&#x30C8;&#x3067;1&#x304C;&#x8A2D;&#x5B9A;&#x3055;&#x308C;&#x3001;&#x305D;&#x306E;&#x307B;&#x304B;&#x306B;&#x306F;0&#x304C;&#x8A2D;&#x5B9A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
+&#x307E;&#x305F;&#x3001;&#x6708;&#x3092;&#x8868;&#x3059;&#x7B2C;&#x4E8C;&#x5F15;&#x6570;&#x306F;0&#x304B;&#x3089;11&#x307E;&#x3067;&#x306E;&#x6570;&#x5024;&#x3067;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x3053;&#x3068;&#x306B;&#x3082;&#x6CE8;&#x610F;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;</p>
 <p>&#x5148;&#x8FF0;&#x3057;&#x305F;2&#x3064;&#x306E;&#x65B9;&#x6CD5;&#x3068;&#x9055;&#x3044;&#x3001;&#x3053;&#x306E;&#x65B9;&#x6CD5;&#x306F;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x3092;&#x6307;&#x5B9A;&#x3067;&#x304D;&#x307E;&#x305B;&#x3093;&#x3002;
 &#x6E21;&#x3057;&#x305F;&#x6570;&#x5024;&#x306F;&#x5E38;&#x306B;&#x30ED;&#x30FC;&#x30AB;&#x30EB;&#x306E;&#x30BF;&#x30A4;&#x30E0;&#x30BE;&#x30FC;&#x30F3;&#x306B;&#x304A;&#x3051;&#x308B;&#x6642;&#x523B;&#x3068;&#x307F;&#x306A;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
-&#x7D50;&#x679C;&#x304C;&#x5B9F;&#x884C;&#x74B0;&#x5883;&#x306B;&#x4F9D;&#x5B58;&#x3057;&#x3066;&#x3057;&#x307E;&#x3046;&#x305F;&#x3081;&#x3001;&#x57FA;&#x672C;&#x7684;&#x306B;&#x3053;&#x306E;&#x65B9;&#x6CD5;&#x306F;&#x4F7F;&#x3046;&#x3079;&#x304D;&#x3067;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;
+<!-- textlint-disable -->
+&#x7D50;&#x679C;&#x304C;&#x5B9F;&#x884C;&#x74B0;&#x5883;&#x306B;&#x4F9D;&#x5B58;&#x3057;&#x3066;&#x3057;&#x307E;&#x3046;&#x305F;&#x3081;&#x3001;&#x57FA;&#x672C;&#x7684;&#x306B;&#x3053;&#x306E;&#x65B9;&#x6CD5;&#x306F;&#x4F7F;&#x3046;&#x3079;&#x304D;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;
+<!-- textlint-enable -->
 &#x6642;&#x523B;&#x3092;&#x90E8;&#x5206;&#x3054;&#x3068;&#x306B;&#x6307;&#x5B9A;&#x3057;&#x305F;&#x3044;&#x5834;&#x5408;&#x306F;&#x3001;<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC" target="_blank">Date.UTC</a>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x4F7F;&#x3046;&#x3068;&#x3088;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x3002;
 &#x6E21;&#x3059;&#x5F15;&#x6570;&#x306E;&#x5F62;&#x5F0F;&#x306F;&#x540C;&#x3058;&#x3067;&#x3059;&#x304C;&#x3001;<code>Date.UTC</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x6E21;&#x3055;&#x308C;&#x305F;&#x6570;&#x5024;&#x3092;UTC&#x306B;&#x304A;&#x3051;&#x308B;&#x6642;&#x523B;&#x3068;&#x3057;&#x3066;&#x6271;&#x3044;&#x3001;&#x305D;&#x306E;&#x6642;&#x523B;&#x5024;&#x3092;&#x8FD4;&#x3057;&#x307E;&#x3059;&#x3002;</p>
 <p><a class="gitbook-plugin-js-console" aria-hidden="true"></a></p>
@@ -1400,8 +1508,8 @@ ISO 8601&#x3068;&#x306F;&#x56FD;&#x969B;&#x898F;&#x683C;&#x3068;&#x306A;&#x3063;
 <span class="hljs-keyword">const</span> date2 = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(ms);
 <span class="hljs-built_in">console</span>.log(date2.toISOString()); <span class="hljs-comment">// =&gt; &quot;2006-01-02T15:04:05.999Z&quot;</span>
 </code></pre>
-<p>&#x306A;&#x304A;&#x3001;&#x3069;&#x306E;&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30ED;&#x30FC;&#x30C9;&#x306B;&#x3082;&#x3042;&#x3066;&#x306F;&#x307E;&#x3089;&#x306A;&#x3044;&#x5F15;&#x6570;&#x3084;&#x3001;&#x6642;&#x523B;&#x3068;&#x3057;&#x3066;&#x30D1;&#x30FC;&#x30B9;&#x3067;&#x304D;&#x306A;&#x3044;&#x6587;&#x5B57;&#x5217;&#x3092;&#x6E21;&#x3057;&#x305F;&#x969B;&#x306B;&#x3082;&#x3001;<code>Date</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306F;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
-&#x305F;&#x3060;&#x3057;&#x3001;&#x3053;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x304C;&#x3082;&#x3064;&#x6642;&#x523B;&#x306F;&#x4E0D;&#x6B63;&#x3067;&#x3042;&#x308B;&#x305F;&#x3081;&#x3001;<code>getTime</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;<code>NaN</code>&#x3092;&#x8FD4;&#x3057;&#x3001;<code>toString</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;<code>Invalid Date</code>&#x3068;&#x3044;&#x3046;&#x6587;&#x5B57;&#x5217;&#x3092;&#x8FD4;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x306A;&#x304A;&#x3001;&#x3069;&#x306E;&#x30AA;&#x30FC;&#x30D0;&#x30FC;&#x30ED;&#x30FC;&#x30C9;&#x306B;&#x3082;&#x5F53;&#x3066;&#x306F;&#x307E;&#x3089;&#x306A;&#x3044;&#x5F15;&#x6570;&#x3084;&#x3001;&#x6642;&#x523B;&#x3068;&#x3057;&#x3066;&#x30D1;&#x30FC;&#x30B9;&#x3067;&#x304D;&#x306A;&#x3044;&#x6587;&#x5B57;&#x5217;&#x3092;&#x6E21;&#x3057;&#x305F;&#x969B;&#x306B;&#x3082;&#x3001;<code>Date</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306F;&#x4F5C;&#x6210;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
+&#x305F;&#x3060;&#x3057;&#x3001;&#x3053;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x304C;&#x6301;&#x3064;&#x6642;&#x523B;&#x306F;&#x4E0D;&#x6B63;&#x3067;&#x3042;&#x308B;&#x305F;&#x3081;&#x3001;<code>getTime</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;<code>NaN</code>&#x3092;&#x8FD4;&#x3057;&#x3001;<code>toString</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;<code>Invalid Date</code>&#x3068;&#x3044;&#x3046;&#x6587;&#x5B57;&#x5217;&#x3092;&#x8FD4;&#x3057;&#x307E;&#x3059;&#x3002;</p>
 <p><a class="gitbook-plugin-js-console" aria-hidden="true"></a></p>
 <pre><code class="lang-js"><span class="hljs-comment">// &#x4E0D;&#x6B63;&#x306A;Date&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092;&#x4F5C;&#x6210;&#x3059;&#x308B;</span>
 <span class="hljs-keyword">const</span> invalid = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&quot;&quot;</span>);
@@ -1409,17 +1517,18 @@ ISO 8601&#x3068;&#x306F;&#x56FD;&#x969B;&#x898F;&#x683C;&#x3068;&#x306A;&#x3063;
 <span class="hljs-built_in">console</span>.log(invalid.toString()); <span class="hljs-comment">// =&gt; &quot;Invalid Date&quot;</span>
 </code></pre>
 <h3 id="instance-method"><a name="instance-method" class="plugin-anchor" href="#instance-method"><i class="fa fa-link" aria-hidden="true"></i></a>Date&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x30E1;&#x30BD;&#x30C3;&#x30C9; </h3>
-<p><code>Date</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306F;&#x591A;&#x304F;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x3082;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;
+<p><code>Date</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306F;&#x591A;&#x304F;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3092;&#x6301;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;
 &#x307B;&#x3068;&#x3093;&#x3069;&#x306F;<code>getHours</code>&#x3068;<code>setHours</code>&#x306E;&#x3088;&#x3046;&#x306A;&#x3001;&#x6642;&#x523B;&#x306E;&#x5404;&#x90E8;&#x5206;&#x3092;&#x53D6;&#x5F97;&#x30FB;&#x66F4;&#x65B0;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;&#x3059;&#x3002;</p>
 <p>&#x6B21;&#x306E;&#x4F8B;&#x306F;&#x3001;&#x65E5;&#x4ED8;&#x3092;&#x6C7A;&#x307E;&#x3063;&#x305F;&#x5F62;&#x5F0F;&#x306E;&#x6587;&#x5B57;&#x5217;&#x306B;&#x5909;&#x63DB;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;
 <code>getMonth</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3084;<code>setMonth</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306E;&#x3088;&#x3046;&#x306B;&#x6708;&#x3092;&#x6570;&#x5024;&#x3067;&#x6271;&#x3046;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306F;&#x3001;0&#x304B;&#x3089;11&#x306E;&#x6570;&#x5024;&#x3067;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x3053;&#x3068;&#x306B;&#x6CE8;&#x610F;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x3042;&#x308B;<code>Date</code>&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306E;&#x6642;&#x523B;&#x304C;&#x4F55;&#x6708;&#x304B;&#x3092;&#x8868;&#x793A;&#x3059;&#x308B;&#x306B;&#x306F;&#x3001;<code>getMonth</code>&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306E;&#x623B;&#x308A;&#x5024;&#x306B;1&#x3092;&#x8DB3;&#x3059;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
-<p><a class="gitbook-plugin-js-console" aria-hidden="true"></a></p>
+<p><a class="gitbook-plugin-js-console" aria-hidden="true"></a>
+<!-- doctest:meta:{ "ECMAScript": "2017" } --></p>
 <pre><code class="lang-js"><span class="hljs-comment">// YYYY/MM/DD&#x5F62;&#x5F0F;&#x306E;&#x6587;&#x5B57;&#x5217;&#x306B;&#x5909;&#x63DB;&#x3059;&#x308B;&#x95A2;&#x6570;</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">formatDate</span>(<span class="hljs-params">date</span>) </span>{
-    <span class="hljs-keyword">const</span> yyyy = <span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>(date.getFullYear());
+    <span class="hljs-keyword">const</span> yyyy = <span class="hljs-built_in">String</span>(date.getFullYear());
     <span class="hljs-comment">// String#padStart&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#xFF08;ES2017&#xFF09;&#x3067;2&#x6841;&#x306B;&#x306A;&#x308B;&#x3088;&#x3046;&#x306B;0&#x57CB;&#x3081;&#x3059;&#x308B;</span>
-    <span class="hljs-keyword">const</span> mm = <span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>(date.getMonth() + <span class="hljs-number">1</span>).padStart(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;0&quot;</span>);
-    <span class="hljs-keyword">const</span> dd = <span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>(date.getDate()).padStart(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;0&quot;</span>);
+    <span class="hljs-keyword">const</span> mm = <span class="hljs-built_in">String</span>(date.getMonth() + <span class="hljs-number">1</span>).padStart(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;0&quot;</span>);
+    <span class="hljs-keyword">const</span> dd = <span class="hljs-built_in">String</span>(date.getDate()).padStart(<span class="hljs-number">2</span>, <span class="hljs-string">&quot;0&quot;</span>);
     <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${yyyy}</span>/<span class="hljs-subst">${mm}</span>/<span class="hljs-subst">${dd}</span>`</span>;
 }
 
@@ -1457,6 +1566,15 @@ ISO 8601&#x3068;&#x306F;&#x56FD;&#x969B;&#x898F;&#x683C;&#x3068;&#x306A;&#x3063;
 <span class="hljs-comment">// format&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x3067;&#x4EFB;&#x610F;&#x306E;&#x66F8;&#x5F0F;&#x306E;&#x6587;&#x5B57;&#x5217;&#x306B;&#x5909;&#x63DB;&#x3059;&#x308B;</span>
 <span class="hljs-built_in">console</span>.log(future.format(<span class="hljs-string">&quot;YYYY/MM/DD&quot;</span>));
 </code></pre>
+<h2 id="conclusion"><a name="conclusion" class="plugin-anchor" href="#conclusion"><i class="fa fa-link" aria-hidden="true"></i></a>&#x307E;&#x3068;&#x3081; </h2>
+<p>&#x3053;&#x306E;&#x7AE0;&#x3067;&#x306F;&#x3001;Date&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306B;&#x3064;&#x3044;&#x3066;&#x5B66;&#x3073;&#x307E;&#x3057;&#x305F;&#x3002;</p>
+<ul>
+<li><code>Date</code>&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x306F;&#x3042;&#x308B;&#x7279;&#x5B9A;&#x306E;&#x6642;&#x523B;&#x3092;&#x8868;&#x3059;&#x30D3;&#x30EB;&#x30C8;&#x30A4;&#x30F3;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;</li>
+<li><code>Date</code>&#x306B;&#x304A;&#x3051;&#x308B;&#x300C;&#x6642;&#x523B;&#x300D;&#x306F;&#x3001;UTC&#xFF08;&#x5354;&#x5B9A;&#x4E16;&#x754C;&#x6642;&#xFF09;&#x306E;1970&#x5E74;1&#x6708;1&#x65E5;0&#x6642;0&#x5206;0&#x79D2;&#x3092;&#x57FA;&#x6E96;&#x3068;&#x3057;&#x305F;&#x76F8;&#x5BFE;&#x7684;&#x306A;&#x30DF;&#x30EA;&#x79D2;&#x3068;&#x3057;&#x3066;&#x4FDD;&#x6301;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;</li>
+<li><code>Date</code>&#x30B3;&#x30F3;&#x30B9;&#x30C8;&#x30E9;&#x30AF;&#x30BF;&#x3067;&#x4EFB;&#x610F;&#x306E;&#x6642;&#x9593;&#x3092;&#x8868;&#x3059;<code>Date</code>&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x3092;&#x4F5C;&#x6210;&#x3067;&#x304D;&#x308B;</li>
+<li><code>Date</code>&#x30A4;&#x30F3;&#x30B9;&#x30BF;&#x30F3;&#x30B9;&#x30E1;&#x30BD;&#x30C3;&#x30C9;&#x306B;&#x306F;&#x3055;&#x307E;&#x3056;&#x307E;&#x306A;&#x3082;&#x306E;&#x304C;&#x3042;&#x308B;&#x304C;&#x3001;&#x73FE;&#x5B9F;&#x306E;&#x30E6;&#x30FC;&#x30B9;&#x30B1;&#x30FC;&#x30B9;&#x3067;&#x306F;&#x6A5F;&#x80FD;&#x304C;&#x4E0D;&#x5341;&#x5206;&#x306B;&#x306A;&#x308A;&#x3084;&#x3059;&#x3044;</li>
+<li>&#x30D3;&#x30EB;&#x30C8;&#x30A4;&#x30F3;&#x30AA;&#x30D6;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;<code>Date</code>&#x306E;&#x307F;&#x3067;&#x306F;&#x306A;&#x304F;&#x3001;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3082;&#x5408;&#x308F;&#x305B;&#x3066;&#x5229;&#x7528;&#x3059;&#x308B;&#x306E;&#x304C;&#x4E00;&#x822C;&#x7684;</li>
+</ul>
 
                                 
                                 </section>
@@ -1464,6 +1582,10 @@ ISO 8601&#x3068;&#x306F;&#x56FD;&#x969B;&#x898F;&#x683C;&#x3068;&#x306A;&#x3063;
                         </div>
                     </div>
                 
+<footer class="book_footer">
+    <p>Copyright (c) 2016-present <a href="https://github.com/asciidwango/js-primer">jsprimer project</a></p>
+</footer>
+
             </div>
 
             
@@ -1484,7 +1606,7 @@ ISO 8601&#x3068;&#x306F;&#x56FD;&#x969B;&#x898F;&#x683C;&#x3068;&#x306A;&#x3063;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"author":"laco","description":"日付や時刻を扱うビルトインオブジェクトのDateを紹介します。","title":"Date","level":"1.3.25","depth":2,"next":{"title":"Math","level":"1.3.26","depth":2,"path":"basic/math/README.md","ref":"./basic/math/README.md","articles":[]},"previous":{"title":"JSON","level":"1.3.24","depth":2,"path":"basic/json/README.md","ref":"./basic/json/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","page-toc-button","include-codeblock","anchors","canonical-link","ga","js-console","github-issue-feedback","todo"],"root":"./source/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"docSearch":{"apiKey":"fd28ebaba94be0c39fb9fa1b2fed4f23","index":"asciidwango"},"github-issue-feedback":{"repo":"asciidwango/js-primer"},"todo":{},"fontsettings":{"theme":"white","family":"sans","size":2},"js-console":{},"canonical-link":{"baseURL":"https://jsprimer.net"},"highlight":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"ga":{"configuration":"auto","token":"UA-2184335-18"},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"./resources/gitbook-plugin-include-codeblock.hbs","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/asciidwango/js-primer/edit/master/source/","label":"Edit"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{"esversion":"2018","nodeversion":"8.12.0","npmversion":"6.4.1","triplebackticks":"```","console":"<a class=\"gitbook-plugin-js-console\" aria-hidden=\"true\"></a>"},"title":"JavaScriptの入門書 #jsprimer","gitbook":">=3.0.0","description":"JavaScriptの基本的な文法からアプリケーションの作成などの実例を学ぶJavaScriptの入門書です"},"file":{"path":"basic/date/README.md","mtime":"2019-03-25T13:58:15.602Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-25T13:59:36.190Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"author":"laco","description":"日付や時刻を扱うビルトインオブジェクトのDateを紹介します。","title":"Date","level":"1.3.25","depth":2,"next":{"title":"Math","level":"1.3.26","depth":2,"path":"basic/math/README.md","ref":"./basic/math/README.md","articles":[]},"previous":{"title":"JSON","level":"1.3.24","depth":2,"path":"basic/json/README.md","ref":"./basic/json/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","page-toc-button","include-codeblock","anchors","canonical-link","ga","js-console","github-issue-feedback"],"root":"./source/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"docSearch":{"apiKey":"fd28ebaba94be0c39fb9fa1b2fed4f23","index":"asciidwango"},"github-issue-feedback":{"repo":"asciidwango/js-primer"},"fontsettings":{"theme":"white","family":"sans","size":2},"js-console":{},"canonical-link":{"baseURL":"https://jsprimer.net"},"highlight":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"ga":{"configuration":"auto","token":"UA-2184335-18"},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"./resources/gitbook-plugin-include-codeblock.hbs","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"base":"https://github.com/asciidwango/js-primer/edit/master/source/","label":"Edit"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"IPAexMincho","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{"esversion":"2019","nodeversion":"12.13.0","npmversion":"6.12.0","triplebackticks":"```","console":"<a class=\"gitbook-plugin-js-console\" aria-hidden=\"true\"></a>"},"title":"JavaScript Primer #jsprimer","gitbook":">=3.0.0","description":"JavaScriptの基本的な書き方からアプリケーションの作成などのユースケースを学ぶための入門書です"},"file":{"path":"basic/date/README.md","mtime":"2020-06-07T09:45:57.627Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-07T09:47:11.863Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -18,12 +18,12 @@ export function htmlToElement(html) {
  * @return {Element}
  */
 export function element(strings, ...values) {
-    const htmlString = strings.reduce((result, string, i) => {
+    const htmlString = strings.reduce((result, str, i) => {
         const value = values[i - 1];
         if (typeof value === "string") {
-            return result + escapeSpecialChars(value) + string;
+            return result + escapeSpecialChars(value) + str;
         } else {
-            return result + String(value) + string;
+            return result + String(value) + str;
         }
     });
     return htmlToElement(htmlString);
@@ -35,8 +35,8 @@ export function element(strings, ...values) {
  * @param {Element} containerElement コンテナ要素
  */
 export function render(bodyElement, containerElement) {
-    // rootElementの中身を空にする
+    // containerElementの中身を空にする
     containerElement.innerHTML = "";
-    // rootElementの直下にbodyElementを追加する
+    // containerElementの直下にbodyElementを追加する
     containerElement.appendChild(bodyElement);
 }

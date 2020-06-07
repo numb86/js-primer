@@ -10,10 +10,10 @@ export class TodoListModel extends EventEmitter {
     }
 
     /**
-     * TodoItemの合計数を返す
+     * TodoItemの合計個数を返す
      * @returns {number}
      */
-    get totalCount() {
+    getTotalCount() {
         return this.items.length;
     }
 
@@ -30,7 +30,15 @@ export class TodoListModel extends EventEmitter {
      * @param {Function} listener
      */
     onChange(listener) {
-        this.addEventLister("change", listener);
+        this.addEventListener("change", listener);
+    }
+
+    /**
+     * TodoListの状態が更新されたときに呼び出されるリスナー関数を解除する
+     * @param {Function} listener
+     */
+    offChange(listener) {
+        this.removeEventListener("change", listener);
     }
 
     /**
@@ -71,7 +79,7 @@ export class TodoListModel extends EventEmitter {
      * @param {{ id: number }}
      */
     deleteTodo({ id }) {
-        // `id`が一致するTodoItemを`this.items`から取り除き、削除する
+        // `id`に一致しないTodoItemだけを残すことで、`id`に一致するTodoItemを削除する
         this.items = this.items.filter(todo => {
             return todo.id !== id;
         });

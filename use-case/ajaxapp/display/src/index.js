@@ -1,32 +1,29 @@
-function getUserInfo(userId) {
-    const request = new XMLHttpRequest();
-    request.open("GET", `https://api.github.com/users/${userId}`);
-    request.addEventListener("load", (event) => {
-        if (event.target.status !== 200) {
-            console.log(`${event.target.status}: ${event.target.statusText}`);
-            return;
-        }
-
-        const userInfo = JSON.parse(event.target.responseText);
-
-        const view = escapeHTML`
-        <h4>${userInfo.name} (@${userInfo.login})</h4>
-        <img src="${userInfo.avatar_url}" alt="${userInfo.login}" height="100">
-        <dl>
-            <dt>Location</dt>
-            <dd>${userInfo.location}</dd>
-            <dt>Repositories</dt>
-            <dd>${userInfo.public_repos}</dd>
-        </dl>
-        `;
-
-        const result = document.getElementById("result");
-        result.innerHTML = view;
-    });
-    request.addEventListener("error", () => {
-        console.error("Network Error");
-    });
-    request.send();
+function fetchUserInfo(userId) {
+    fetch(`https://api.github.com/users/${encodeURIComponent(userId)}`)
+        .then(response => {
+            if (!response.ok) {
+                console.error("エラーレスポンス", response);
+            } else {
+                return response.json().then(userInfo => {
+                    // HTMLの組み立て
+                    const view = escapeHTML`
+                    <h4>${userInfo.name} (@${userInfo.login})</h4>
+                    <img src="${userInfo.avatar_url}" alt="${userInfo.login}" height="100">
+                    <dl>
+                        <dt>Location</dt>
+                        <dd>${userInfo.location}</dd>
+                        <dt>Repositories</dt>
+                        <dd>${userInfo.public_repos}</dd>
+                    </dl>
+                    `;
+                    // HTMLの挿入
+                    const result = document.getElementById("result");
+                    result.innerHTML = view;
+                });
+            }
+        }).catch(error => {
+            console.error(error);
+        });
 }
 
 function escapeSpecialChars(str) {
@@ -39,12 +36,12 @@ function escapeSpecialChars(str) {
 }
 
 function escapeHTML(strings, ...values) {
-    return strings.reduce((result, string, i) => {
+    return strings.reduce((result, str, i) => {
         const value = values[i - 1];
         if (typeof value === "string") {
-            return result + escapeSpecialChars(value) + string;
+            return result + escapeSpecialChars(value) + str;
         } else {
-            return result + String(value) + string;
+            return result + String(value) + str;
         }
     });
 }

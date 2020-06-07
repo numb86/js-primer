@@ -1,2 +1,2 @@
-const bookTitle = "JavaScriptの本";
-bookTitle = "上書き"; // TypeError: invalid assignment to const `bookTitle'
+const bookTitle = "JavaScript Primer";
+bookTitle = "新しいタイトル"; // => TypeError: invalid assignment to const 'bookTitle'

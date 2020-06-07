@@ -11,4 +11,13 @@ declare screenshotOnly="${projectDir}/tools/applescript/lib/src/screenshot-only.
 
 # スクショ
 mkdir -p "${currentSectionDir}/img/"
-node "${screenshot}" --url "http://localhost:3000/" --output "${currentSectionDir}/img/todo-html.png"
+npx -q @js-primer/local-server . & serverPID=$!
+npx -q wait-on http://localhost:3000 \
+&& node "${screenshot}" --url "http://localhost:3000/" --output "${currentSectionDir}/img/todo-html.png" 
+
+# server 終了
+function finish {
+  echo "Shutting down the server..."
+  kill $serverPID
+}
+trap finish INT KILL TERM EXIT

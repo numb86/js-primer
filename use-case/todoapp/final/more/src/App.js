@@ -71,7 +71,7 @@ export class App {
             }
         });
         render(todoListElement, todoListContainerElement);
-        todoCountElement.textContent = `Todoアイテム数: ${this.todoListModel.totalCount}`;
+        todoCountElement.textContent = `Todoアイテム数: ${this.todoListModel.getTotalCount()}`;
     }
 
     /**
@@ -87,6 +87,6 @@ export class App {
      */
     unmount() {
         this.todoListModel.offChange(this.handleChange);
-        this.formElement.removeEventLister("submit", this.handleSubmit);
+        this.formElement.removeEventListener("submit", this.handleSubmit);
     }
 }
